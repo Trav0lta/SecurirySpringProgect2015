@@ -1,5 +1,6 @@
 package ua.com.owu.entity;
 
+import org.springframework.security.access.method.P;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,6 +20,11 @@ public class User implements UserDetails {
     private String firstName;
     private String lastName;
     private String avatar;
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "user")
+
+    private Profile profile;
+
+
     @Enumerated(EnumType.STRING)
     private Authority authority = Authority.ROLE_USER;
 
@@ -64,9 +70,6 @@ public class User implements UserDetails {
     }
 
 
-
-
-
     public void setId(int id) {
         this.id = id;
     }
@@ -83,6 +86,22 @@ public class User implements UserDetails {
         this.email = email;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
     public void setAuthority(Authority authority) {
         this.authority = authority;
     }
@@ -97,18 +116,6 @@ public class User implements UserDetails {
 
     public void setCredentialsNonExpired(boolean credentialsNonExpired) {
         this.credentialsNonExpired = credentialsNonExpired;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
     }
 
     public void setEnabled(boolean enabled) {

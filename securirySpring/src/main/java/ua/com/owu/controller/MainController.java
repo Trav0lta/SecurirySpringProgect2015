@@ -1,21 +1,22 @@
 package ua.com.owu.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ua.com.owu.entity.Profile;
 import ua.com.owu.entity.User;
+import ua.com.owu.service.ProfileService;
 import ua.com.owu.service.UserService;
-
-import java.util.List;
 
 @Controller
 public class MainController {
     @Autowired
     UserService userService;
+    @Autowired
+    ProfileService profileService;
+
 
     @GetMapping("/")
     public String toIndex(){
@@ -36,6 +37,16 @@ public class MainController {
         user.setLastName(lastName);
         userService.save(user);
         return "/logination";
+    }
+
+    @PostMapping("save2")
+    public String saveProfile(@RequestParam("interest")String interest,
+                              @RequestParam("aim")String aim){
+        Profile profile = new Profile();
+        profile.setInterest(interest);
+        profile.setAim(aim);
+        profileService.save(profile);
+        return "/personal";
     }
 
     @PostMapping("/logination")
@@ -59,6 +70,9 @@ public class MainController {
     public String toPersonal(){
         return "/personal";
     }
+
+
+
 
 
 
