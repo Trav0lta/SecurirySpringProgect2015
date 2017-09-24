@@ -16,7 +16,7 @@ public class WebInit implements WebApplicationInitializer {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(WebConfig.class);
 
-        DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
+        DispatcherServlet dispatcherServlet = new DispatcherServlet(context); //приймає на себе перші запити, і дальше розкидує їх
         DelegatingFilterProxy delegatingFilterProxy = new DelegatingFilterProxy();
         servletContext.addFilter("springSecurityFilterChain",delegatingFilterProxy).addMappingForUrlPatterns(null,false,"/*");
 

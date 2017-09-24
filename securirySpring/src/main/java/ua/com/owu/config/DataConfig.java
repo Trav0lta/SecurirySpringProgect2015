@@ -29,7 +29,7 @@ public class DataConfig {
         return dataSource;
     }
     @Bean
-    public JpaVendorAdapter vendorAdapter(){
+    public JpaVendorAdapter vendorAdapter(){  //постачальник послуг
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setDatabase(Database.MYSQL);
         vendorAdapter.setShowSql(true);

@@ -11,6 +11,7 @@ import ua.com.owu.dao.UserDAO;
 import ua.com.owu.entity.User;
 import ua.com.owu.service.UserService;
 
+
 @Service
 @Transactional
 public class UserServiceImpl implements UserService, UserDetailsService {
@@ -30,7 +31,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return userDAO.findByUserName(username);
     }
 
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {  //забезпечує можливісь унікальностіі логіна
         return findByName(username);
     }
+
 }
