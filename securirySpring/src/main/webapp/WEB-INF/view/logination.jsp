@@ -1,11 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>login</title>
-</head>
-<body>
-        <h2>Logination</h2>
-
+<%@include file="tmp/header.jsp" %>
+<nav class="navbar navbar-light bg-light ">
+    <form class="form-inline">
+        <a href="toRegist"><button class="btn btn-outline-success mr-sm-2" type="button">Registration</button></a>
+        <a href="" class="btn btn-outline-danger">Back</a>
+    </form>
+</nav>
+<section class="container" >
+    <div class="row align-items-center" style="height: 500px">
+        <div class="col-8">
         <form action="/logination" method="post">
             <div class="form-group">
                 <label for="validationCustom01">Login</label>
@@ -27,6 +29,8 @@
                    name="${_csrf.parameterName}"
                    value="${_csrf.token}"/>
         </form>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+<%@include file="tmp/footer.jsp"%>

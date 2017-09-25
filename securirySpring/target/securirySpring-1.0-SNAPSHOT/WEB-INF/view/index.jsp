@@ -1,17 +1,24 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<h2>Index</h2>
-<br/>
-<a href="toLogin">to Entering page</a>
-<br>
-<a href="toRegist">to Registration page</a>
-<br>
-<a href="toPersonal">to Personal page</a>
+<%@include file="tmp/header.jsp" %>
 
-</body>
-</html>
+<nav class="navbar navbar-light bg-light ">
+    <form class="form-inline">
+        <a href="toLogin"><button class="btn btn-outline-success mr-sm-2" type="button">Sign in</button></a>
+        <a href="toRegist"><button class="btn btn-outline-primary" type="button">Registration</button></a>
+    </form>
+</nav>
+<div class="view">
+    <!--Intro content-->
+    <div class="full-bg-img flex-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <a class="btn btn-info" href="toPersonal" role="button">to Personal page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Intro content-->
+</div>
+
+<%@include file="tmp/footer.jsp"%>
