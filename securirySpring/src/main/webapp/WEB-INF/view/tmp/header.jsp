@@ -9,5 +9,13 @@
     <link rel="stylesheet" href="/static/css/bootstrap-grid.min.css"/>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/static/css/main.css"/>
+    <style type="text/css">
+        body {
+            font-size: 120%;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            color: #333366;
+            background: silver;
+        }
+    </style>
 </head>
 <body>
