@@ -8,6 +8,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+/**
+ * Created by User on 30.08.2017.
+ */
+
 @Configuration
 @EnableWebMvc
 @ComponentScan("ua.com.owu.*")
