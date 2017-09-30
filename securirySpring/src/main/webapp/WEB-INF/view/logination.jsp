@@ -2,9 +2,11 @@
 <nav class="navbar navbar-light bg-light ">
     <form class="form-inline">
         <a href="toRegist"><button class="btn btn-outline-success mr-sm-2" type="button">Registration</button></a>
-        <a href="" class="btn btn-outline-danger">Back</a>
+        <a href="toPersonal"><button class="btn btn-outline-primary" type="button">Personal</button></a>
+        <a href="/" class="btn btn-outline-danger">Back</a>
     </form>
 </nav>
+
 <section class="container" >
     <div class="row align-items-center" style="height: 500px">
         <div class="col-8">
@@ -25,9 +27,7 @@
                 </label>
             </div>
 
-            <input type="hidden"
-                   name="${_csrf.parameterName}"
-                   value="${_csrf.token}"/>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
         </div>
     </div>

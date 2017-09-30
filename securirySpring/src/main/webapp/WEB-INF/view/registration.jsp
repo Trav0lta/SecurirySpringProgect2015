@@ -2,9 +2,11 @@
 <nav class="navbar navbar-light bg-light ">
     <form class="form-inline">
         <a href="toLogin"><button class="btn btn-outline-primary mr-sm-2" type="button">Sign in</button></a>
-        <a href="" class="btn btn-outline-danger">Back</a>
+        <a href="toPersonal"><button class="btn btn-outline-primary mr-sm-2" type="button">Personal</button></a>
+        <a href="/" class="btn btn-outline-danger">Back</a>
     </form>
 </nav>
+
 <section class="container" >
     <div class="row align-items-center" style="height:700px">
         <div class="col-8">
@@ -46,9 +48,7 @@
 
                 <input type="submit" class="btn btn-primary"></input>
 
-                <input type="hidden"
-                       name="${_csrf.parameterName}"
-                       value="${_csrf.token}"/>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
         </div>
     </div>

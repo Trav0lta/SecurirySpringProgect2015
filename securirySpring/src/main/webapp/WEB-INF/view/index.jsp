@@ -7,8 +7,8 @@
         <a href="toRegist"><button class="btn btn-outline-primary" type="button">Registration</button></a>
     </form>
 </nav>
+
 <div class="view">
-    <!--Intro content-->
     <div class="full-bg-img flex-center">
         <div class="container">
             <div class="row justify-content-center">
@@ -18,7 +18,6 @@
             </div>
         </div>
     </div>
-    <!--/Intro content-->
 </div>
 
 <%@include file="tmp/footer.jsp"%>

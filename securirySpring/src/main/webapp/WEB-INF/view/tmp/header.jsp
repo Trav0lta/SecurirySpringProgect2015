@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>${title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="/static/css/bootstrap-reboot.min.css"/>
-    <link rel="stylesheet" href="/static/css/bootstrap-grid.min.css"/>
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/static/css/main.css"/>
+    <link href="/resources/css/bootstrap-reboot.min.css" rel="stylesheet"/>
+    <link href="/resources/css/bootstrap-grid.min.css" rel="stylesheet"/>
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/resources/css/bootstrap.main.css" rel="stylesheet">
     <style type="text/css">
         body {
             font-size: 120%;
