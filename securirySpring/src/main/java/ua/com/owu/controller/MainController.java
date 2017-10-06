@@ -2,13 +2,13 @@ package ua.com.owu.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import org.springframework.web.bind.annotation.*;
 import ua.com.owu.entity.Profile;
 import ua.com.owu.entity.User;
 import ua.com.owu.service.ProfileService;
 import ua.com.owu.service.UserService;
+import ua.com.owu.validator.UserValidator;
 
 @Controller
 public class MainController {
@@ -16,6 +16,8 @@ public class MainController {
     UserService userService;
     @Autowired
     ProfileService profileService;
+    @Autowired
+    UserValidator userValidator;
 
 
     @GetMapping("/")
@@ -38,6 +40,10 @@ public class MainController {
         userService.save(user);
         return "/logination";
     }
+
+
+
+
 
     @PostMapping("save2")
     public String saveProfile(@RequestParam("interest")String interest,
